@@ -8,6 +8,8 @@ app.conf.enable_utc = False
 app.conf.update(timezone = 'Asia/Kolkata')
 app.config_from_object(settings, namespace=' CELERY')
 
+app.conf.beat_schedule = {
+}
 
 # Celery Beat Settings
 app.autodiscover_tasks()
