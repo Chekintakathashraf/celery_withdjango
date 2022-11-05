@@ -6,7 +6,7 @@ from celeryproject import settings
 
 @shared_task(bind=True)
 def send_mail_func(self):
-    users = get_user_model(). objects.all()
+    users = get_user_model().objects.all()
     for user in users:
         mail_subject = "Hi! Celery Testing"
         message = "welcome every one. Nice to meet"
