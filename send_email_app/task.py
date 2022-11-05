@@ -8,6 +8,8 @@ from celeryproject import settings
 def send_mail_func(self):
     users = get_user_model().objects.all()
     for user in users:
+        print(user)
+        print('----------')
         mail_subject = "Hi! Celery Testing"
         message = "welcome every one. Nice to meet"
         to_email = user.email
